@@ -70,7 +70,11 @@
                     </div>
                 </div>
                 <div class="m-4 relative">
-                    <div class="image">
+                    <div class="flex justify-center items-center text-center relative image">
+                        <div class="absolute z-20">
+                            <p class="on-image-text-big">Animals</p>
+                            <p class="on-image-text-little cursor-pointer">MORE PHOTOS</p>
+                        </div>
                         <img class="" src="@/assets/animals-main.jpg" alt="">
                     </div>
                 </div>
