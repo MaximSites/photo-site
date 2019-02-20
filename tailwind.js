@@ -466,6 +466,7 @@ module.exports = {
     48: '12rem',
     64: '16rem',
     full: '100%',
+    'less-full': '75%',
     screen: '100vh',
     'half-screen': '50vh',
     'less-half-screen': '40vh',
