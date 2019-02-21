@@ -4,7 +4,7 @@
             <carousel style="height: 60vh; width: 100vw" :items="items" :nav="false">
                 <template slot="prev"><span class="prev absolute pin-l pin-t z-20 h-less-full justify-center"
                                             style="margin-top: 17%">
-                    <font-awesome-icon class="text-white lg:hidden" style="transform: rotate(180deg); height: 5vw;width: 5vw"
+                    <font-awesome-icon class="text-white hidden lg:inline-block" style="transform: rotate(180deg); height: 5vw;width: 5vw"
                                        :icon="['fal', 'caret-right']"></font-awesome-icon>
                 </span></template>
                 <div class="mx-4 relative">
@@ -50,7 +50,7 @@
                 </div>
                 <template slot="next"><span class="next absolute pin-r pin-t z-20 h-less-full justify-center"
                                             style="margin-top: 17%">
-                    <font-awesome-icon class="text-white lg:hidden" style="height: 5vw;width: 5vw"
+                    <font-awesome-icon class="text-white hidden lg:inline-block" style="height: 5vw;width: 5vw"
                                        :icon="['fal', 'caret-right']"></font-awesome-icon>
                 </span></template>
             </carousel>
