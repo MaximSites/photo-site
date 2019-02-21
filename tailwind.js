@@ -424,6 +424,7 @@ module.exports = {
     '3/5': '60%',
     '4/5': '80%',
     '1/6': '16.66667%',
+    '1/8': '12.5%',
     '5/6': '83.33333%',
     '9/10': '90%',
     '1/10': '10%',
@@ -471,6 +472,7 @@ module.exports = {
     'half-screen': '50vh',
     'less-half-screen': '40vh',
     'half-screen-xl': '80vh',
+    'screen-ninety': '90vh',
     'half-screen-more': '55vh',
   },
 

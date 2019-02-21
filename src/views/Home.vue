@@ -1,96 +1,56 @@
 <template>
-    <!--<div class="w-screen h-screen overflow-hidden">
-        <div class="w-full flex flex-row">
-            <div class="w-3/10 flex overflow-hidden flex justify-center">
-                <div class="overflow-hidden w-full" style="height: 800px">
-                <img class="" style="max-width: none" src="@/assets/nature-main.jpg" alt="">
-            </div>
-                </div>
-            <div class="w-3/10 flex overflow-hidden flex justify-center">
-                <div class="overflow-hidden w-full" style="height: 800px">
-                <img class="" style="max-width: 300%; transform: translateX(-20%)" src="@/assets/animals-main.jpg" alt="">
-            </div>
-                </div>
-            <div class="w-3/10 flex overflow-hidden flex justify-center">
-                <div class="overflow-hidden w-full" style="height: 800px">
-                <img class="" style="max-width: none" src="@/assets/portrait-main.jpg" alt="">
-            </div>
-                </div>
-            <div class="w-3/10 flex overflow-hidden flex justify-center">
-                <div class="overflow-hidden w-full" style="height: 800px">
-                <img class="" style="max-width: 250%; transform: translateX(-30%)" src="@/assets/travel-main.jpg" alt="">
-            </div>
-                </div>
-        </div>
-    </div>!-->
-    <!--<div class="flex overflow-x-auto overflow-y-hidden" style="height: 80vh">
-        <div class="flex overflow-hidden flex justify-center">
-            <div class="overflow-hidden">
-                <img class="" style="max-width: none" src="@/assets/nature-main.jpg" alt="">
-            </div>
-        </div>
-        <div class="flex overflow-hidden flex justify-center ">
-            <div class="overflow-hidden">
-                <img class="overflow-hidden" style="max-width: 300%; transform: translateX(-20%)" src="@/assets/animals-main.jpg" alt="">
-            </div>
-        </div>
-        <div class="flex overflow-hidden flex justify-center ">
-            <div class="overflow-hidden">
-                <img class="" style="max-width: none" src="@/assets/portrait-main.jpg" alt="">
-            </div>
-        </div>
-        <div class="flex overflow-hidden flex justify-center ">
-            <div class="overflow-hidden">
-                <img class="" style="max-width: 250%; transform: translateX(-30%)" src="@/assets/travel-main.jpg" alt="">
-            </div>
-        </div>
-    </div>!-->
-    <div class="w-screen h-screen overflow-hidden">
-        <div class="flex justify-center items-center" style="height: 10vh; width: 100vw">
-            <p class="mx-10 cursor-pointer nav-element">HOME</p>
-            <p class="mx-10 cursor-pointer nav-element">GALLERY</p>
-            <p class="mx-10 cursor-pointer nav-element">ABOUT ME =)</p>
-            <p class="mx-10 cursor-pointer nav-element">CONTACT</p>
-        </div>
+    <div class="w-screen h-screen-ninety overflow-hidden">
         <div class="relative">
-            <carousel style="height: 60vh; width: 100vw" :items="3.4" :nav="false">
+            <carousel style="height: 60vh; width: 100vw" :items="items" :nav="false">
                 <template slot="prev"><span class="prev absolute pin-l pin-t z-20 h-less-full justify-center"
                                             style="margin-top: 17%">
-                    <font-awesome-icon class="text-white" style="transform: rotate(180deg); height: 13vw;width: 13vw"
+                    <font-awesome-icon class="text-white lg:hidden" style="transform: rotate(180deg); height: 5vw;width: 5vw"
                                        :icon="['fal', 'caret-right']"></font-awesome-icon>
                 </span></template>
-                <div class="m-4 relative">
+                <div class="mx-4 relative">
 
                     <div class="flex justify-center items-center text-center relative image">
                         <div class="absolute z-20">
                             <p class="on-image-text-big">Nature</p>
-                            <p class="on-image-text-little cursor-pointer">MORE PHOTOS</p>
+                                <router-link class="no-underline select-none" to="/nature-gallery">
+                                    <p class="on-image-text-little cursor-pointer">MORE PHOTOS</p>
+                                </router-link>
                         </div>
                         <img class="" src="@/assets/nature-main.jpg" alt="">
                     </div>
                 </div>
-                <div class="m-4 relative">
+                <div class="mx-4 relative">
                     <div class="flex justify-center items-center text-center relative image">
                         <div class="absolute z-20">
                             <p class="on-image-text-big">Animals</p>
-                            <p class="on-image-text-little cursor-pointer">MORE PHOTOS</p>
+                            <router-link class="no-underline select-none" to="/animals-gallery">
+                                <p class="on-image-text-little cursor-pointer">MORE PHOTOS</p>
+                            </router-link>
                         </div>
                         <img class="" src="@/assets/animals-main.jpg" alt="">
                     </div>
                 </div>
-                <div class="m-4 relative">
-                    <div class="image">
+                <div class="mx-4 relative">
+                    <div class="flex justify-center items-center text-center relative image">
+                        <div class="absolute z-20">
+                            <p class="on-image-text-big">Portrait</p>
+                            <p class="on-image-text-little cursor-pointer">MORE PHOTOS</p>
+                        </div>
                         <img class="" style="" src="@/assets/portrait-main.jpg" alt="">
                     </div>
                 </div>
-                <div class="m-4 relative">
-                    <div class="image">
+                <div class="mx-4 relative">
+                    <div class="flex justify-center items-center text-center relative image">
+                        <div class="absolute z-20">
+                            <p class="on-image-text-big">Travel</p>
+                            <p class="on-image-text-little cursor-pointer">MORE PHOTOS</p>
+                        </div>
                         <img class="" style="" src="@/assets/travel-main.jpg" alt="">
                     </div>
                 </div>
                 <template slot="next"><span class="next absolute pin-r pin-t z-20 h-less-full justify-center"
                                             style="margin-top: 17%">
-                    <font-awesome-icon class="text-white" style="height: 13vw;width: 13vw"
+                    <font-awesome-icon class="text-white lg:hidden" style="height: 5vw;width: 5vw"
                                        :icon="['fal', 'caret-right']"></font-awesome-icon>
                 </span></template>
             </carousel>
@@ -100,33 +60,26 @@
 </template>
 
 <script>
-  import carousel from 'vue-owl-carousel';
+import carousel from 'vue-owl-carousel';
+import SiteHead from './site-head.vue';
 
-  export default {
-    components: {carousel},
+export default {
+  components: { SiteHead, carousel },
 
-    data() {
-      return {
-        natureHover: false,
-        portraitHover: false,
-        animalHover: false,
-        travelHover: false,
-      };
-    },
-  };
+  data() {
+    return {
+      items: 3,
+    };
+  },
+  created() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+      this.items = 1;
+    }
+  },
+};
 </script>
 
 <style lang="less">
-
-    .nav-element {
-        font-weight: 550;
-        font-family: "Montserrat-Regular";
-        color: black;
-        transition: all 0.3s;
-        &:hover {
-            color: #20c997;
-        }
-    }
 
     .on-image-text-big {
         font-family: "Montserrat-Regular";
